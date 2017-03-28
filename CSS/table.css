@@ -1,0 +1,20 @@
+.divTable
+{
+	display:  table;
+	width:auto;
+	font-family:verdana;
+	border:3px solid black;
+	padding:5px;
+	border-spacing:4px;
+}
+.divRow
+{
+    display:table-row;
+    width:auto;
+}
+.divCell
+{
+    float:left;	
+    display:table-column;
+    width:200px;
+}
