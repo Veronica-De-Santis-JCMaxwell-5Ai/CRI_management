@@ -1,16 +1,30 @@
 <html>
 	<head>
 		<title>LOGIN</title>
-		<link rel="stylesheet" type="text/css" href="../CSS/login.css">
-		<script type="text/javascript" src="../js/utility.js"></script>
+		<link rel="stylesheet" type="text/css" href="../CSS/login.css">	
+		<link rel="stylesheet" type="text/css" href="../CSS/table.css">	
+		<script type="text/javascript" src="../js/createHomeA.js"></script>
 	</head>
-	<body bgcolor="#343A90">
-		<form class = "login" method = "post" action="../php/into.php">
-			<input type = "text" name = "username" value = "Username" onfocus="this.value = ''" required>
-			<br>
-			<input type = "text" name = "password" value = "Password" onfocus="this.value = ''" required>
-			<br><br>
-			<input type = "submit" id = "login" value = "LOGIN">
-		</form>
+	<body>
+		<dir>
+			<button onclick="create118Call()">Chiamata 118</button>
+			<p id = "118">
+			</p>
+		</dir>
+		<dir>
+			<button onclick="createBase()">Servizio di BASE</button>
+			<p id = "base">
+			</p>
+		</dir>
+		<dir>
+			Trasporto
+			<p id = "trasporto">
+			</p>
+		</dir>
+		<dir>
+			Dialisi
+			<p id = "dialisi">
+			</p>
+		</dir>
 	</body>
 </html>
