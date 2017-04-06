@@ -5,8 +5,7 @@
 <html>
 	<head>
 		<title>LOGIN</title>
-		<link rel="stylesheet" type="text/css" href="../CSS/login.css">
-		<script type="text/javascript" src="../js/utility.js"></script>
+		<link rel="stylesheet" type="text/css" href="/CSS/login.css">
 	</head>
 	<body>
 		<?php
@@ -17,37 +16,26 @@
 			if($password == "Password" or $username == "Username")
 			{
 				echo "<script> alert('Attenzione, inserisci nome utente e password corretti!'); </script>";
-				echo "<script> location.replace('../HTML/login.html'); </script>";
+				echo "<script> location.replace('../index.html'); </script>";
 			} else {
 				$db = mysqli_select_db($conn, "cri")
 					or die("Attenzione, errore. Database non trovato ");
 				$query = "SELECT *
 						  FROM volontari
-						  WHERE username == '$username' AND password == '$password'";
+						  WHERE username = '$username' AND password = '$password'";
 				$result = mysqli_query($conn, $query)
-					or die("Attenzione, errore ". mysqli_errno);
+					or die("Attenzione, errore ". mysqli_error($conn));
 				$count = mysqli_num_rows($result);
 				if($count == 1)
 				{
 					$query = "SELECT level
 							  FROM volontari
-							  WHERE username == '$username' AND password == '$password'";
-					$result = mysqli_query($query);
-					switch($result)
-					{
-						case 1:
-							echo "<script> location.replace('../HTML/baseHomepage.html'); </script>";
-							break;
-						case 2:
-							echo "<script> location.replace('../HTML/tHomepage.html'); </script>";
-							break;
-						case 3:
-							echo "<script> location.replace('../HTML/aHomepage.html'); </script>";
-							break;
-					}
+							  WHERE username = '$username' AND password = '$password'";
+					$result = mysqli_query($conn, $query);
+					echo "<script> location.replace('../home.html'); </script>";
 				} else {
 					echo "<script> alert('Username e password non esistenti'); </script>";
-					echo "<script> location.replace('../HTML/login.html'); </script>";
+					echo "<script> location.replace('../index.html'); </script>";
 				}
 			}
 		?>	
