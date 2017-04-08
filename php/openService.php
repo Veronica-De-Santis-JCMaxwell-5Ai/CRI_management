@@ -11,6 +11,7 @@
 		<link rel="stylesheet" type="text/css" href="/CSS/index.css">	
 		<link rel="stylesheet" type="text/css" href="/CSS/table.css">
         <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
+		<script type="text/javascript" src="/js/utility.js"></script>
 	</head>
 	<body>
 		<div style="background-color:#666;">
@@ -45,6 +46,8 @@
 							$allarme = $row['allarme'];
 							
 							echo "<form method = post action='base.php'>";
+								echo "<input type='hidden' name='idbtn' id='idbtn$number' value = 'ciao'>";
+								echo "<input type='hidden' name='idcd' id='idcd$number' value = '$code'>";
 								echo "<div class='divTable'>";
 									echo "<div class='divRow'>";
 										echo "<div class='divCell' name='codice$number'>";
@@ -75,7 +78,7 @@
 											echo $allarme;
 										echo "</div>";
 										echo "<div class='divCell'>";
-											echo "<input type ='submit' value ='Modifica' id = $number onClick = chooseNumber($number)>";
+											echo "<input type ='submit' value ='Modifica' id = $number onClick = setHiddenTag('$number')>";
 										echo "</div>";
 									echo "</div>";
 								echo "</div>";	
@@ -94,4 +97,3 @@
 		</dir>
 	</body>
 </html>
-
