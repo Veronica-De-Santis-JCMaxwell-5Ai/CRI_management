@@ -1,6 +1,9 @@
 
-function chooseNumber(id)
+function setHiddenTag(id)
 {
-	alert(id);
-	location.replace("base.php?number=" + id.value);
+	var number = new String(id);
+	var idCode = "idcd" + number;
+	var idBtn = "idbtn" + number;
+	var code = document.getElementById(idCode).value;
+	var btn = document.getElementById(idBtn).value = code;
 }
