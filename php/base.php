@@ -1,6 +1,13 @@
 <?php
-$number = $_POST['number'];
-echo "<script>alert($number);</script>";
+	$code = $_POST['idbtn'];
+	$conn = mysqli_connect("localhost", "root", "")
+		or die("Attenzione, errore. Server non trovato");
+	$db = mysqli_select_db($conn, "cri")
+		or die("Attenzione, errore. Database non trovato ");
+	$query = "SELECT * FROM `chiamate` WHERE codice = '$code'";
+	$result = mysqli_query($conn, $query)
+		or die("Attenzione, errore ". mysqli_error($conn));
+	$row = mysqli_fetch_array($result);
 ?>
 <html>
 	<head>
@@ -8,7 +15,6 @@ echo "<script>alert($number);</script>";
 		<link rel="stylesheet" type="text/css" href="/CSS/index.css">	
 		<link rel="stylesheet" type="text/css" href="/CSS/table.css">
         <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
-		<script type="text/javascript" src="/js/utility.js"></script>
 	</head>
 	<body>
 		<div style="background-color:#666;">
@@ -33,10 +39,7 @@ echo "<script>alert($number);</script>";
 						<input type = "text" value = "Sigla" onFocus="this.value = ''" required>
 					</div>
 					<div class = "control-group">
-						<?php
-							$code = $_POST['codice'];
-							echo "<input type = text value=$code onFocus='this.value = ''' required>";
-						?>
+						<input type = "text" value = "<?php echo $row['codice']; ?>" onFocus="this.value = ''" required>
 					</div>
 				</div>
 				<div style="background-color:#666;">
@@ -44,10 +47,10 @@ echo "<script>alert($number);</script>";
 				</div>
 				<div class = "login-form">
 					<div class = "control-group">
-						<input type = "text" value = "Comune" onFocus="this.value = ''" required>
+						<input type = "text" value = "<?php echo $row['localita']; ?>" onFocus="this.value = ''" required>
 					</div>
 					<div class = "control-group">
-						<input type = "text" value = "Indirizzo" onFocus="this.value = ''" required>
+						<input type = "text" value = "<?php echo $row['indirizzo']; ?>" onFocus="this.value = ''" required>
 					</div>
 				</div>
 				<div style="background-color:#666;">
@@ -55,10 +58,10 @@ echo "<script>alert($number);</script>";
 				</div>
 				<div class = "login-form">
 					<div class = "control-group">
-						<input type = "text" value = "Nome" onFocus="this.value = ''" required>
+						<input type = "text" value = "<?php echo $row['nome']; ?>" onFocus="this.value = ''" required>
 					</div>
 					<div class = "control-group">
-						<input type = "text" value = "Cognome" onFocus="this.value = ''" required>
+						<input type = "text" value = "<?php echo $row['cognome']; ?>" onFocus="this.value = ''" required>
 					</div>
 					<div class = "control-group">
 						<input type = "date" onFocus="this.value = ''">
@@ -87,7 +90,7 @@ echo "<script>alert($number);</script>";
 				</div>
 				<div class = "login-form">
 					<div class = "control-group">
-						<input type = "time" onFocus="this.value = ''" required>
+						<input type = "time" value = "<?php echo $row['allarme']; ?>" onFocus="this.value = ''" required>
 					</div>
 					<div class = "control-group">
 						<input type = "time" onFocus="this.value = ''" required>
