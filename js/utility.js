@@ -1,9 +1,5 @@
 
-function setHiddenTag(id)
+function deleteOnFocus(id)
 {
-	var number = new String(id);
-	var idCode = "idcd" + number;
-	var idBtn = "idbtn" + number;
-	var code = document.getElementById(idCode).value;
-	var btn = document.getElementById(idBtn).value = code;
+	document.getElementById(id).setAttribute('onFocus', '');
 }
