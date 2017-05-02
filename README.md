@@ -1,6 +1,7 @@
 # CRI management
   ## Descrizione
 Progetto d'esame di De Santis Veronica e Misael Miccichè. Sito web che si occupa della gestione delle varie uscite delle ambulanze in una sede di Croce Rossa.
+In questo documento si vogliono illustrare i concetti realtivi alle gestione di un progetto studiati durante l’apposito corso. Si noti il modello di sviluppo a cascata, ovvero una fase per volta.
     
   ## Installazione
 Scaricare tutta la cartella e copiarla nella cartella htdocs di xampp, (é possibile scaricare l'ultima versione di xampp seguendo il [link](https://www.apachefriends.org/it/download.html)) . Installate sul vosro server il database che trovate nella cartella 'bk_sql'. Aprite il vostro browser e digitate sulla barra degli indirzzi 'localhost' e premete invio. Si aprirà la pagina di login, dove dovrete accedere con le credenziali fornitevi dall'amministratore. Leggete il manuale d'uso per tutte le informazioni neccessarie all'uso del sito.
