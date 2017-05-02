@@ -19,10 +19,10 @@
 			<h4 align="center" style="color:#FFF;">Home Page</h4>
 		</div>
 		<dir>
-			<button class="btn" onClick="location.replace('118Call.html');">CHIAMATA 118</button>
+			<button class="btn" onClick="location.replace('118Call.php');">CHIAMATA 118</button>
 		</dir>
 		<dir>
-			<button class="btn" onClick="location.replace('base.html');">SERVIZIO DI BASE</button>
+			<button class="btn" onClick="location.replace('../home.html');">SERVIZIO DI BASE</button>
 			<div class = "base">
 				<?php
 					$query = "SELECT * FROM `chiamate` WHERE isClosed = 0";
@@ -44,41 +44,37 @@
 							$nome = $row['nome'];
 							$cognome = $row['cognome'];
 							$allarme = $row['allarme'];
+							$data = $row['data'];
 							
 							echo "<form method = post action='base.php'>";
-								echo "<input type='hidden' name='idbtn' id='idbtn$number' value = 'ciao'>";
 								echo "<input type='hidden' name='idcd' id='idcd$number' value = '$code'>";
 								echo "<div class='divTable'>";
 									echo "<div class='divRow'>";
-										echo "<div class='divCell' name='codice$number'>";
+										echo "<div class='divCell'>";
 											echo $code;
 										echo "</div>";
-										echo "<div class='divCell' name='localita$number'>";
+										echo "<div class='divCell'>";
 											echo $localita;
 										echo "</div>";
-										echo "<div class='divCell' name='indirizzo$number'>";
+										echo "<div class='divCell'>";
 											echo $indirizzo;
 										echo "</div>";
 										echo "<div class='divCell'>";
-											echo $row['numero'];
-										echo "</div>";
-										if($row["piano"] != "")
-										{
-											echo "<div class='divCell'>";
-											echo $row['piano'];
-											echo "</div>";
-										}
-										echo "<div class='divCell' name='nome$number'>";
 											echo $nome;
 										echo "</div>";
-										echo "<div class='divCell' name='cognome$number'>";
+									echo "</div>";
+									echo "<div class='divRow'>";
+										echo "<div class='divCell'>";
 											echo $cognome;
 										echo "</div>";
-										echo "<div class='divCell' name='allarme$number'>";
+										echo "<div class='divCell'>";
 											echo $allarme;
 										echo "</div>";
 										echo "<div class='divCell'>";
-											echo "<input type ='submit' value ='Modifica' id = $number onClick = setHiddenTag('$number')>";
+											echo $data;
+										echo "</div>";
+										echo "<div class='divCell'>";
+											echo "<input type ='submit' value ='Modifica' id = $number>";
 										echo "</div>";
 									echo "</div>";
 								echo "</div>";	
@@ -97,3 +93,4 @@
 		</dir>
 	</body>
 </html>
+
