@@ -24,6 +24,17 @@ La pagina richiede l'inserimento dei membri dell'equipaggio, le info del pazient
 ## Dialisi
 Vanno inserite le stesse informazioni di un trasporto, con in aggiunta la durata della dialisi
     
+# Abstract
+
+## De Santis
+
+Websites that allows volunteers to manage ambulances and all the services provided by a Red Cross Committee. As a volunteer, I know how important a system like this could be, specially in the big emergencies, like floods, earthquakes or fires.
+
+## Miccichè
+
+Despite I am not a volunteer, I know how important is the service offered by the Red Cross Committee, and I completely support them. For this reason I have decided to join the CRI project with Veronica. The website allows volunteers to manage ambulances and all the services provided by the Red Cross Committee.
+
+
   ## Collaboratori progetto
 De Santis Veronica
 
