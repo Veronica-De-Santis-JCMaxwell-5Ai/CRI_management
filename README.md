@@ -1,7 +1,7 @@
 # CRI management
 
   ## Obiettivo
-  Il sito web risultante dal progetto dovrebbe aiutare il volontario a gestire le uscite delle ambulanza e i vari equipaggi presenti in sede, nonchè di gestire servizi aggiuntivi quali trasporto e dialisi. La semplificazione del lavoro dei volontari attraverso l'eliminazione del cartaceo è il nostro scopo primario. Un fine secondario sarà quello di permettere all'amministrazione di effettuare ricerche all'interno del database nel quale sono presenti tutti i dati raccolti. 
+  Il sito web risultante dal progetto dovrebbe aiutare il volontario a gestire le uscite delle ambulanze e i vari equipaggi presenti in sede, nonchè di gestire servizi aggiuntivi quali trasporto e dialisi. La semplificazione del lavoro dei volontari attraverso l'eliminazione del cartaceo è il nostro scopo primario. Un fine secondario sarà quello di permettere all'amministrazione di effettuare ricerche all'interno del database nel quale sono presenti tutti i dati raccolti. 
 
   ## Descrizione
 Progetto d'esame di De Santis Veronica e Misael Miccichè. Sito web che si occupa della gestione delle varie uscite delle ambulanze in una sede di Croce Rossa.
