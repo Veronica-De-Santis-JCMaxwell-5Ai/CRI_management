@@ -43,7 +43,12 @@ Websites that allows volunteers to manage ambulances and all the services provid
 Despite I am not a volunteer, I know how important is the service offered by the Red Cross Committee, and I completely support them. For this reason I have decided to join the CRI project with Veronica. The website allows volunteers to manage ambulances and all the services provided by the Red Cross Committee.
 
 
-  ## Collaboratori progetto
+## Collaboratori progetto
 De Santis Veronica
 
 Miccichè Misael
+
+## Team di supporto
+Mari Nicolò, compagno di classe
+
+Davide Trucco, volontario comitato di Moncalieri
